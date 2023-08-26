@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Images on Same Page</title>
+    <style>
+        .image-container {
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            margin: 10px;
+            overflow: auto;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: fill;
+        }
+    </style>
+</head>
+<body>
+    <div class="image-container">
+        <a href="./M&M Brochure From Chandan sharma 2 pages_page-0001.jpg" target="_blank">
+            <img src="./M&M Brochure From Chandan sharma 2 pages_page-0001.jpg" alt="First Image">
+        </a>
+    </div>
+
+    <div class="image-container">
+        <a href="path/to/second/image.jpg" target="_blank">
+            <img src="./M&M Brochure From Chandan sharma 2 pages_page-0002.jpg" alt="Second Image">
+        </a>
+    </div>
+</body>
+</html>
