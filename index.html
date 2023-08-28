@@ -27,10 +27,35 @@
         body {
             background-color: peachpuff;
         }
+        
+        /* Styling for the header */
+        .header {
+            background-color: transparent;
+            transition: background-color 0.3s ease-in-out;
+            position: fixed;
+            width: 100%;
+            z-index: 1000; /* Ensure the header is above other elements */
+        }
+        
+        .scrolled {
+            background-color: #f8d7da; /* Change to desired color on scroll */
+        }
+        
+        /* Animation for changing background color */
+        @keyframes fadeInBackground {
+            from {
+                background-color: transparent;
+            }
+            to {
+                background-color: #f8d7da; /* Change to desired color on scroll */
+            }
+        }
     </style>
 </head>
 <body>
-    <h1 class="display-1 text-center">The Meat N Milk Store</h1>
+    <div class="header">
+        <h1 class="display-1 text-center">The Meat N Milk Store</h1>
+    </div>
 
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
@@ -42,5 +67,17 @@
             </div>
         </div>
     </div>
+
+    <script>
+        $(document).ready(function () {
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 0) {
+                    $('.header').addClass('scrolled');
+                } else {
+                    $('.header').removeClass('scrolled');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
